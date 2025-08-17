@@ -50,6 +50,70 @@ document.addEventListener('DOMContentLoaded', () => {
         impactObserver.observe(impactSection);
     }
 
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            const isActive = item.classList.contains('active');
+
+            faqItems.forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.faq-answer').style.maxHeight = 0;
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+    // Modal Logic
+    const modal = document.getElementById('auth-modal');
+    const loginBtn = document.querySelector('.login-btn');
+    const signupBtn = document.querySelector('.signup-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    const showSignup = document.getElementById('show-signup');
+    const showLogin = document.getElementById('show-login');
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+
+    loginBtn.onclick = () => {
+        modal.style.display = 'block';
+        loginForm.style.display = 'block';
+        signupForm.style.display = 'none';
+    }
+
+    signupBtn.onclick = () => {
+        modal.style.display = 'block';
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+    }
+
+    closeBtn.onclick = () => {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    showSignup.onclick = (e) => {
+        e.preventDefault();
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+    }
+
+    showLogin.onclick = (e) => {
+        e.preventDefault();
+        signupForm.style.display = 'none';
+        loginForm.style.display = 'block';
+    }
+
     // Initialize map
     const map = L.map('map').setView([51.505, -0.09], 13);
 

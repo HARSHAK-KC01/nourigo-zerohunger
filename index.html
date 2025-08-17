@@ -155,6 +155,57 @@
             </div>
         </section>
 
+        <section id="events">
+            <h2 class="section-title animate-on-scroll">Events & Campaigns</h2>
+            <div class="event-cards">
+                <div class="card animate-on-scroll">
+                    <h3>Food Drive - Summer 2025</h3>
+                    <p>Join us for our annual summer food drive. We're collecting non-perishable food items to support local families.</p>
+                    <button class="cta-button secondary">Learn More</button>
+                </div>
+                <div class="card animate-on-scroll">
+                    <h3>Volunteer Day</h3>
+                    <p>Spend a day with us packing and distributing food to those in need. A great way to give back to the community.</p>
+                    <button class="cta-button secondary">Sign Up</button>
+                </div>
+                <div class="card animate-on-scroll">
+                    <h3>Charity Gala</h3>
+                    <p>Our annual charity gala to raise funds for our programs. An evening of food, music, and community.</p>
+                    <button class="cta-button secondary">Get Tickets</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title animate-on-scroll">Frequently Asked Questions</h2>
+            <div class="faq-container animate-on-scroll">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can I donate food?
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can donate food by finding a nearby donation point on our interactive map or by contacting us to arrange a pickup for larger donations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I sign up as a volunteer?
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can sign up as a volunteer by filling out the form on our "Get Involved" page. We'll then contact you with opportunities in your area.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Where does the donated food go?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Donated food is distributed to our network of partner organizations, including old age homes, orphanages, and other charitable institutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="animals">
             <h2 class="section-title animate-on-scroll">Help Our Furry Friends</h2>
             <div class="animal-cards">
@@ -179,6 +230,31 @@
             </div>
         </section>
     </main>
+
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="login-form">
+                <h2>Log In</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="cta-button">Log In</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+            </div>
+            <div id="signup-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="cta-button">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" id="show-login">Log In</a></p>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-content">
