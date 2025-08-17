@@ -100,7 +100,7 @@ nav ul li a:hover {
     justify-content: center;
     height: 100vh;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://loremflickr.com/1920/1080/community,food,donation') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://loremflickr.com/1920/1080/food,donation,volunteer,community,charity/all') no-repeat center center/cover;
     padding: 0 2rem;
     color: #fff;
 }
