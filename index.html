@@ -135,19 +135,49 @@
             </div>
         </section>
 
-        <section id="map-section">
-            <h2 class="section-title animate-on-scroll">Find Help Nearby</h2>
-            <div id="map" class="animate-on-scroll"></div>
+        <section id="map-section" class="animate-on-scroll">
+            <h2 class="section-title">Our Reach</h2>
+            <p class="subtitle">Find our centers, volunteers, and donors across the nation. Enter a location or pincode to search.</p>
+            <div class="map-search-container">
+                <input type="text" id="map-search-input" placeholder="Enter Indian Pincode...">
+                <button id="map-search-btn" class="cta-button secondary">Search</button>
+            </div>
+            <div id="map"></div>
         </section>
 
-        <section id="contact">
-            <h2 class="section-title animate-on-scroll">Contact Us</h2>
-            <form class="contact-form animate-on-scroll">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
+        <section id="contact" class="animate-on-scroll">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <img src="https://loremflickr.com/40/40/phone,call" alt="Phone Icon">
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <img src="https://loremflickr.com/40/40/email,mail" alt="Email Icon">
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>contact@nourigo.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <img src="https://loremflickr.com/40/40/location,pin" alt="Location Icon">
+                        <div>
+                            <h4>Our HQ</h4>
+                            <p>123 Nourigo Street, Bangalore, 560001</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
         </section>
 
         <section id="partners">

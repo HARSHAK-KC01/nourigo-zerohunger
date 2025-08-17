@@ -405,11 +405,82 @@ section {
     color: #495057;
 }
 
+.map-search-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#map-search-input {
+    padding: 0.75rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 25px;
+    width: 300px;
+    font-family: 'Poppins', sans-serif;
+}
+
 #map {
     height: 450px;
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--bg-color);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.contact-info-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.contact-info-item h4 {
+    margin: 0 0 0.25rem 0;
+    color: var(--primary-color);
+}
+
+.contact-info-item p {
+    margin: 0;
+    color: #666;
+}
+
+.contact-form {
+    flex: 1.5;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .animal-cards {

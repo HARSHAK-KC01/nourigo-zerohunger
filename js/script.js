@@ -150,15 +150,38 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const locations = [
-        { lat: 28.7041, lon: 77.1025, type: 'volunteer', name: 'Volunteer Hub - Delhi' },
-        { lat: 19.0760, lon: 72.8777, type: 'donor', name: 'Generous Givers - Mumbai' },
-        { lat: 12.9716, lon: 77.5946, type: 'receiver', name: 'Hope Orphanage - Bangalore' },
-        { lat: 22.5726, lon: 88.3639, type: 'receiver', name: 'Community Kitchen - Kolkata' },
-        { lat: 17.3850, lon: 78.4867, type: 'volunteer', name: 'Helping Hands - Hyderabad' }
+        { lat: 28.7041, lon: 77.1025, type: 'volunteer', name: 'Volunteer Hub - Delhi', pincode: '110001' },
+        { lat: 19.0760, lon: 72.8777, type: 'donor', name: 'Generous Givers - Mumbai', pincode: '400001' },
+        { lat: 12.9716, lon: 77.5946, type: 'receiver', name: 'Hope Orphanage - Bangalore', pincode: '560001' },
+        { lat: 22.5726, lon: 88.3639, type: 'receiver', name: 'Community Kitchen - Kolkata', pincode: '700001' },
+        { lat: 17.3850, lon: 78.4867, type: 'volunteer', name: 'Helping Hands - Hyderabad', pincode: '500001' }
     ];
 
     locations.forEach(loc => {
         const marker = L.marker([loc.lat, loc.lon], { icon: icons[loc.type] }).addTo(map);
-        marker.bindPopup(`<b>${loc.name}</b><br>Type: ${loc.type}`);
+        marker.bindPopup(`<b>${loc.name}</b><br>Type: ${loc.type}<br>Pincode: ${loc.pincode}`);
+    });
+
+    const searchBtn = document.getElementById('map-search-btn');
+    const searchInput = document.getElementById('map-search-input');
+
+    searchBtn.addEventListener('click', () => {
+        const pincode = searchInput.value.trim();
+        if (pincode.length === 6 && /^\d+$/.test(pincode)) {
+            // In a real application, you would use a geocoding service or an API
+            // to get lat/lon from a pincode. Here, we'll just filter our mock data.
+            const foundLocation = locations.find(loc => loc.pincode === pincode);
+            if (foundLocation) {
+                map.setView([foundLocation.lat, foundLocation.lon], 13);
+                L.popup()
+                    .setLatLng([foundLocation.lat, foundLocation.lon])
+                    .setContent(`Found location at pincode: ${pincode}`)
+                    .openOn(map);
+            } else {
+                alert('Pincode not found in our current locations.');
+            }
+        } else {
+            alert('Please enter a valid 6-digit Indian pincode.');
+        }
     });
 });
