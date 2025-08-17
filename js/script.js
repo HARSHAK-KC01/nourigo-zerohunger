@@ -114,21 +114,51 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.style.display = 'block';
     }
 
-    // Initialize map
-    const map = L.map('map').setView([51.505, -0.09], 13);
+    // Initialize map centered on India
+    const map = L.map('map').setView([20.5937, 78.9629], 5);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+    // Custom Icons
+    const volunteerIcon = L.icon({
+        iconUrl: 'https://loremflickr.com/40/40/volunteer,person',
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -40]
+    });
+
+    const donorIcon = L.icon({
+        iconUrl: 'https://loremflickr.com/40/40/giving,hand',
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -40]
+    });
+
+    const receiverIcon = L.icon({
+        iconUrl: 'https://loremflickr.com/40/40/building,community',
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -40]
+    });
+
+    const icons = {
+        volunteer: volunteerIcon,
+        donor: donorIcon,
+        receiver: receiverIcon
+    };
+
     const locations = [
-        { lat: 51.5, lon: -0.09, type: 'volunteer', name: 'John Doe' },
-        { lat: 51.51, lon: -0.1, type: 'donor', name: 'Jane Roe' },
-        { lat: 51.49, lon: -0.08, type: 'receiver', name: 'Happy Homes Orphanage' }
+        { lat: 28.7041, lon: 77.1025, type: 'volunteer', name: 'Volunteer Hub - Delhi' },
+        { lat: 19.0760, lon: 72.8777, type: 'donor', name: 'Generous Givers - Mumbai' },
+        { lat: 12.9716, lon: 77.5946, type: 'receiver', name: 'Hope Orphanage - Bangalore' },
+        { lat: 22.5726, lon: 88.3639, type: 'receiver', name: 'Community Kitchen - Kolkata' },
+        { lat: 17.3850, lon: 78.4867, type: 'volunteer', name: 'Helping Hands - Hyderabad' }
     ];
 
     locations.forEach(loc => {
-        const marker = L.marker([loc.lat, loc.lon]).addTo(map);
-        marker.bindPopup(`<b>${loc.name}</b><br>${loc.type}`);
+        const marker = L.marker([loc.lat, loc.lon], { icon: icons[loc.type] }).addTo(map);
+        marker.bindPopup(`<b>${loc.name}</b><br>Type: ${loc.type}`);
     });
 });
