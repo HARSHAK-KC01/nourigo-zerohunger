@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -100,8 +100,9 @@ nav ul li a:hover {
     justify-content: center;
     height: 100vh;
     text-align: center;
-    background: linear-gradient(to right, rgba(56, 102, 65, 0.05), rgba(252, 163, 17, 0.05));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://loremflickr.com/1920/1080/community,food,donation') no-repeat center center/cover;
     padding: 0 2rem;
+    color: #fff;
 }
 
 .hero-content h1 {
@@ -114,7 +115,7 @@ nav ul li a:hover {
 .hero-content p {
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
-    color: #495057; /* A softer text color */
+    color: #f8f9fa; /* A softer text color */
 }
 
 .cta-button {
@@ -189,6 +190,12 @@ section {
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
 }
 
 .timeline {
