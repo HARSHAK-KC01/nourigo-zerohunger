@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nourigo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Nourigo</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">Log In</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="animate-on-scroll">Bridging the Gap for Those in Need.</h1>
+                <p class="animate-on-scroll">Our mission is to connect communities, one meal at a time.</p>
+                <div class="hero-buttons animate-on-scroll">
+                    <button class="cta-button">Donate Food</button>
+                    <button class="cta-button secondary">Get Involved</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title animate-on-scroll">Our Mission</h2>
+            <div class="about-cards">
+                <div class="card animate-on-scroll">
+                    <h3>Our Vision</h3>
+                    <p>A world where everyone has access to nutritious food.</p>
+                </div>
+                <div class="card animate-on-scroll">
+                    <h3>Our Values</h3>
+                    <p>Community, compassion, and collaboration.</p>
+                </div>
+                <div class="card animate-on-scroll">
+                    <h3>Our Goal</h3>
+                    <p>To build a network of donors and volunteers to support those in need.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <h2 class="section-title animate-on-scroll">How It Works</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-icon">1</div>
+                    <h3>Collect</h3>
+                    <p>We collect surplus food from donors.</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-icon">2</div>
+                    <h3>Connect</h3>
+                    <p>We connect with volunteers to transport food.</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-icon">3</div>
+                    <h3>Donate</h3>
+                    <p>We deliver food to those in need.</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-icon">4</div>
+                    <h3>Impact</h3>
+                    <p>We measure our impact and share success stories.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact">
+            <h2 class="section-title animate-on-scroll">Our Impact</h2>
+            <div class="impact-stats">
+                <div class="stat animate-on-scroll">
+                    <h3 data-target="10000">0</h3>
+                    <p>Meals Donated</p>
+                </div>
+                <div class="stat animate-on-scroll">
+                    <h3 data-target="500">0</h3>
+                    <p>Volunteers</p>
+                </div>
+                <div class="stat animate-on-scroll">
+                    <h3 data-target="100">0</h3>
+                    <p>Communities Served</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2 class="section-title animate-on-scroll">Stories from Our Community</h2>
+            <div class="testimonial-carousel animate-on-scroll">
+                <div class="testimonial">
+                    <p>"Nourigo has been a blessing for our orphanage. The regular food donations have made a huge difference in the lives of our children."</p>
+                    <h4>- Mrs. Smith, Director of Happy Homes Orphanage</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Volunteering with Nourigo has been a rewarding experience. It's amazing to see the direct impact of our efforts on the community."</p>
+                    <h4>- John Doe, Volunteer</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"As a donor, I appreciate how transparent and efficient Nourigo is. I know my contributions are making a real difference."</p>
+                    <h4>- Jane Roe, Donor</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-involved">
+            <h2 class="section-title animate-on-scroll">Get Involved</h2>
+            <div class="cta-buttons">
+                <button class="cta-button animate-on-scroll">Volunteer</button>
+                <button class="cta-button animate-on-scroll">Donate Food</button>
+                <button class="cta-button animate-on-scroll">Partner With Us</button>
+            </div>
+        </section>
+
+        <section id="map-section">
+            <h2 class="section-title animate-on-scroll">Find Help Nearby</h2>
+            <div id="map" class="animate-on-scroll"></div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title animate-on-scroll">Contact Us</h2>
+            <form class="contact-form animate-on-scroll">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+
+        <section id="partners">
+            <h2 class="section-title animate-on-scroll">Our Partners & Sponsors</h2>
+            <div class="partner-logos animate-on-scroll">
+                <img src="https://via.placeholder.com/150" alt="Partner 1">
+                <img src="https://via.placeholder.com/150" alt="Partner 2">
+                <img src="https://via.placeholder.com/150" alt="Partner 3">
+                <img src="https://via.placeholder.com/150" alt="Partner 4">
+                <img src="https://via.placeholder.com/150" alt="Partner 5">
+            </div>
+        </section>
+
+        <section id="animals">
+            <h2 class="section-title animate-on-scroll">Help Our Furry Friends</h2>
+            <div class="animal-cards">
+                <div class="card animate-on-scroll">
+                    <img src="https://loremflickr.com/320/240/dog" alt="Dog">
+                    <h3>Help Feed a Dog</h3>
+                    <p>Your donation can provide a week's worth of meals for a dog in a shelter.</p>
+                    <button class="cta-button">Donate Now</button>
+                </div>
+                <div class="card animate-on-scroll">
+                    <img src="https://loremflickr.com/320/240/cat" alt="Cat">
+                    <h3>Support a Cat</h3>
+                    <p>Help us provide food and care for cats waiting for their forever homes.</p>
+                    <button class="cta-button">Donate Now</button>
+                </div>
+                <div class="card animate-on-scroll">
+                    <img src="https://loremflickr.com/g/320/240/horse" alt="Horse">
+                    <h3>Care for a Horse</h3>
+                    <p>Your contribution helps us feed and shelter rescued horses.</p>
+                    <button class="cta-button">Donate Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Nourigo. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
